@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>GRAPH GENERATOR</title>
+</head>
+<body>
+    <h1>Select Columns</h1>
+    <form method="post">
+        <label for="column1">Select First Column:</label>
+        <select name="column1" id="column1">
+            {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="column2">Select Second Column:</label>
+        <select name="column2" id="column2">
+            {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

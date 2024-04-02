@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GRAPH GENERATOR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Select Chart Type</h1>
+    <form method="post">
+        <label for="chart_type">Select Chart Type:</label>
+        <select name="chart_type" id="chart_type">
+            <option value="heatmap">Heatmap</option>
+            <option value="funnel">Funnel Chart</option>
+            <option value="bar">Bar Chart</option>
+            <option value="bubble">Bubble Chart</option>
+            <option value="contour">Contour Plot</option>
+            <option value="line">Line Chart</option>
+            <option value="pie">Pie Chart</option>
+        </select><br><br>
+        <input type="submit" value="Generate Chart" />
+    </form>
+</body>
+</html>
